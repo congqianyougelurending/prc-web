@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        height:200px;
+        width:200px;                
+        background:green;
+        margin:50px;
+        border:20px solid black;
+        padding:20px;
+    }
+
+    .div1{
+        box-sizing:content-box;
+
+       }
+    .div2{
+        box-sizing:border-box;  
+       }
+</style>
+<body>
+    <div class="div1">
+        content-box 标准盒模型，又叫做 W3C盒模型，一般在现代浏览器中使用的都是这个盒模型<br>
+        content-box：padding和border不被包含在定义的width和height之内。 盒子的实际宽度=设置的width+padding+border
+    </div>
+    <div class="div2">
+        border-box 怪异盒模型，低版本IE浏览器中的盒模型<br>
+        border-box：padding和border被包含在定义的width和height之内。 盒子的实际宽度=设置的width（padding和border不会影响实际宽度）
+    </div>
+    <script>
+        var div =document.getElementsByTagName("div");
+        console.log("content-box宽度="+div[0].offsetWidth);
+        console.log("border-box宽度="+div[1].offsetWidth);
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>不定宽高-水平居中</title>
+		<style type="text/css">
+            html,body{
+            	text-align: center;
+            	height: 100%;
+            	margin: 0;
+            }
+            .layers-box{
+            	height: 100%;
+            }
+            .layers{
+            	padding: 15px;
+            	display: inline-block;
+            	max-width: 60%;/**可以设置可以不设置--兼容性【IE7+】--**/
+            	vertical-align: middle;
+            	background-color: #717FA5;
+            	color: #E4E8F1;
+            }
+            .layers-i{
+            	display: inline-block;
+            	height: 100%;
+            	vertical-align: middle;
+            }
+            #btn{
+            	position: absolute;
+            	right: 5px;
+            	top: 5px;
+            }
+		</style>
+	</head>
+	<body>
+		<button id="btn">更改文字</button>
+		<!--
+        	作者：java-script@qq.com
+        	时间：2017-12-06
+        	描述：不定宽高水平居中--盒子--star
+        -->
+		<div class="layers-box">
+			<!--
+	        	作者：java-script@qq.com
+	        	时间：2017-12-06
+	        	描述：不定宽高水平居中--要居中的元素--star
+	        -->
+			<span class="layers" id="layers">
+			 测试文字
+		    </span>
+		    <!--
+	        	作者：java-script@qq.com
+	        	时间：2017-12-06
+	        	描述：不定宽高水平居中--要居中的元素--end
+	        -->
+	        
+	        
+		    <!--
+	        	作者：java-script@qq.com
+	        	时间：2017-12-06
+	        	描述：不定宽高水平居中--辅助元素--star
+	        -->
+		    <i class="layers-i"></i>
+		    <!--
+	        	作者：java-script@qq.com
+	        	时间：2017-12-06
+	        	描述：不定宽高水平居中--辅助元素--end
+	        -->
+		</div>
+		<!--
+        	作者：java-script@qq.com
+        	时间：2017-12-06
+        	描述：不定宽高水平居中--盒子--end
+        -->
+        
+        
+        
+        <!--
+        	作者：java-script@qq.com
+        	时间：2017-12-06
+        	描述：我创建了一个web前端技术群
+        	          想入群的童鞋可以添加。
+        	          群号码：   198303871  
+        -->
+		<script type="text/javascript">
+			var i=0;
+			btn.onclick=function(){
+				if(!i){
+					document.getElementById("layers").innerText="好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！好多测试文字！";
+				    i=1;
+				}else{
+					document.getElementById("layers").innerText="很少的测试文字!";
+					i=0;
+				}
+				
+			}
+		</script>
+	</body>
+</html>
+
